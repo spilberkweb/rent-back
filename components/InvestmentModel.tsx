@@ -237,7 +237,7 @@ export function InvestmentModel() {
               <input
                 type="range"
                 min="2"
-                max="6"
+                max="3.5"
                 step="0.1"
                 value={yld}
                 onChange={(e) => setYld(Number(e.target.value))}
