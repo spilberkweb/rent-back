@@ -1,14 +1,13 @@
 "use client";
 
 import { useLanguage } from "@/app/contexts/LanguageContext";
-import { Card, CardContent } from "@/components/ui/card";
-import { Clock, Mail, MapPin, Phone, Users } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { WaitingListForm } from "@/components/contact/WaitingListForm";
+import { Card, CardContent } from "@/components/ui/card";
+import { Clock, Mail, MapPin, Phone, Users } from "lucide-react";
 
 export default function Page() {
   const { t } = useLanguage();
-
 
   return (
     <div className="py-20">

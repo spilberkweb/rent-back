@@ -15,22 +15,24 @@ export function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#1e3a8a] text-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#1e3a8a] text-white overflow-hidden min-h-[calc(100vh-80px)] flex items-center">
       <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
 
-      <div className="container mx-auto px-4 py-20 md:py-28">
+      <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="inline-block px-4 py-2 bg-[#f59e0b]/20 border border-[#f59e0b]/30 rounded-full text-[#fbbf24] text-sm">
+            <div className="inline-block px-4 py-2 bg-[#f59e0b]/10 border border-[#f59e0b]/30 rounded-full text-[#f59e0b] text-sm font-medium tracking-wide">
               {t.hero.badge}
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-[76px] font-bold leading-[1.1] tracking-tight">
               {t.hero.title}{" "}
               <span className="text-[#fbbf24]">{t.hero.titleHighlight}</span>
             </h1>
 
-            <p className="text-xl text-gray-300">{t.hero.subtitle}</p>
+            <p className="text-xl md:text-[22px] text-gray-300 leading-relaxed max-w-2xl">
+              {t.hero.subtitle}
+            </p>
 
             <div className="flex flex-wrap gap-4">
               <Link href="#investor-benefits">

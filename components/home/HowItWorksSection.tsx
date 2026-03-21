@@ -43,20 +43,30 @@ export function HowItWorksSection() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 pt-8">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <Card key={index} className="relative border-2 hover:border-[#f59e0b] transition-colors">
-                <CardContent className="p-6">
-                  <div className="absolute top-0 left-0 w-14 h-12 bg-[#1e3a8a] text-white rounded-br-[24px] flex items-center justify-center text-xl font-bold shadow-sm">
+              <Card 
+                key={index} 
+                className="relative bg-white overflow-visible border border-gray-200 hover:border-[#f59e0b] hover:shadow-md transition-all duration-300"
+              >
+                <CardContent className="p-8">
+                  <div className="absolute -top-6 -left-6 w-12 h-12 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center text-lg font-bold shadow-md z-10">
                     {step.number}
                   </div>
-                  <div className="w-12 h-12 bg-[#f59e0b]/10 rounded-lg flex items-center justify-center mb-4 mt-4">
-                    <Icon className="w-6 h-6 text-[#f59e0b]" />
+                  
+                  <div className="w-12 h-12 bg-[#f59e0b]/10 rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-5 h-5 text-[#f59e0b]" />
                   </div>
-                  <h3 className="text-xl mb-2 text-[#1e3a8a]">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  
+                  <h3 className="text-lg font-semibold mb-3 text-[#1e3a8a]">
+                    {step.title}
+                  </h3>
+                  
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    {step.description}
+                  </p>
                 </CardContent>
               </Card>
             );

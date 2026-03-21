@@ -57,12 +57,12 @@ export function Header() {
           >
             {t.nav.contact}
           </Link>
-          <LanguageSelector />
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-6">
+          <LanguageSelector />
           <Link href="/kontakt">
-            <Button className="bg-[#1e3a8a] hover:bg-[#1e40af]">
+            <Button className="bg-[#243B66] hover:bg-[#1c2e50] text-white rounded-lg h-11 px-8 text-base font-medium">
               {t.contact.getInTouch}
             </Button>
           </Link>
