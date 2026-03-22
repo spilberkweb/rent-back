@@ -3,7 +3,7 @@
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
-const logoDark = "/imports/RENTBACK_01_primary_dark.svg";
+const logoWhite = "/rent-back-white.svg";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -13,11 +13,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <img
-              src={(logoDark as any).src || (logoDark as any)}
-              alt="Rent|Back"
-              className="h-12 mb-4"
-            />
+            <img src={logoWhite} alt="Rent|Back" className="h-12 mb-4" />
             <p className="text-gray-400">{t.footer.tagline}</p>
           </div>
 

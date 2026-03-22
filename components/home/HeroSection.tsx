@@ -17,17 +17,17 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6 max-w-2xl">
             <div className="inline-block px-4 py-2 bg-[#f59e0b]/10 border border-[#f59e0b]/30 rounded-full text-[#f59e0b] text-sm font-medium tracking-wide">
               {t.hero.badge}
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-[76px] font-bold leading-[1.1] tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight">
               {t.hero.title}{" "}
               <span className="text-[#fbbf24]">{t.hero.titleHighlight}</span>
             </h1>
 
-            <p className="text-xl md:text-[22px] text-gray-300 leading-relaxed max-w-2xl">
+            <p className="text-xl md:text-[22px] text-gray-300 leading-relaxed">
               {t.hero.subtitle}
             </p>
 
@@ -43,7 +43,7 @@ export function HeroSection() {
               <Link href="/kontakt#waiting-list">
                 <Button
                   size="lg"
-                  className="bg-white text-[#1e3a8a] hover:bg-gray-100"
+                  className="bg-[#C00000] text-white hover:bg-[#990000] transition-colors"
                 >
                   {t.contact.joinWaitingList}
                 </Button>

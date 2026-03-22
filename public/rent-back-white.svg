@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 374 91" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+    <g transform="matrix(1,0,0,1,-44.853477,-24)">
+        <g>
+            <g transform="matrix(1,0,0,1,206.26,70)">
+                <text x="-164.182px" y="0px" style="font-family:'Georgia', serif;font-size:58px;fill:rgb(200,169,110);">R<tspan x="-121.746px -82.113px -35.882px " y="0px 0px 0px ">ENT</tspan></text>
+            </g>
+            <path d="M218,25L218,83C218,83.552 217.552,84 217,84C216.448,84 216,83.552 216,83L216,25C216,24.448 216.448,24 217,24C217.552,24 218,24.448 218,25Z" style="fill:rgb(27,42,74);fill-opacity:0.2;"/>
+            <g transform="matrix(1,0,0,1,228,70)">
+                <text x="0px" y="0px" style="font-family:'Georgia', serif;font-size:58px;fill:white;">B<tspan x="39.661px 80.313px 119.294px " y="0px 0px 0px ">ACK</tspan></text>
+            </g>
+            <g transform="matrix(0.7,0,0,0.7,232,82)">
+                <path d="M4,0C4,0 5,4 5.5,10C6,16 6,22 5.8,28C5.6,32 6,35 8,36C11,37 14.5,34 17,30C19,27 20,24 19.5,22C18.5,19 15,18 12,19.5C9,21 7,25 6,30" style="fill:none;fill-rule:nonzero;stroke:rgb(200,169,110);stroke-width:2.2px;"/>
+            </g>
+            <g transform="matrix(0.7,0,0,0.7,232,82)">
+                <path d="M26,18C26,18 27,22 28.5,26C30,30 31,32 32,32C33,32 33.5,30 33.5,30" style="fill:none;fill-rule:nonzero;stroke:rgb(200,169,110);stroke-width:2.2px;stroke-linejoin:miter;"/>
+            </g>
+            <g transform="matrix(0.7,0,0,0.7,232,82)">
+                <path d="M37,18C37,18 35,24 33,30C31,36 28.5,42 26.5,44C25,45.5 23.5,45 23,43C22.5,41 23,39 24,38" style="fill:none;fill-rule:nonzero;stroke:rgb(200,169,110);stroke-width:2.2px;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,418.56,112)">
+                <text x="-94.104px" y="0px" style="font-family:'Helvetica-Light', 'Helvetica', sans-serif;font-weight:300;font-size:18px;fill:white;">S<tspan x="-81.666px -69.228px -62.784px -51.336px -37.89px -25.452px -12.006px " y="0px 0px 0px 0px 0px 0px 0px ">PILBERK</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>
