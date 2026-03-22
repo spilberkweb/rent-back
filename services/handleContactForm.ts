@@ -3,15 +3,9 @@
 import { ContactEmailTemplate } from "@/emails/ContactEmailTemplate";
 import { Resend } from "resend";
 import { z } from "zod";
+import { translations } from "@/app/locales/translations";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
-const ContactFormSchema = z.object({
-  name: z.string().min(2, "Jméno musí mít alespoň 2 znaky"),
-  email: z.string().email("Neplatná emailová adresa"),
-  phone: z.string().min(9, "Telefon musí mít alespoň 9 znaků"),
-  message: z.string().min(5, "Zpráva musí mít alespoň 5 znaků"),
-});
 
 export type ContactFormState = {
   success: boolean;
@@ -29,8 +23,18 @@ export async function handleContactForm(
   prevState: ContactFormState,
   formData: FormData,
 ): Promise<ContactFormState> {
-  // Wait for a bit to simulate processing for smoother UX
+  // Wait for a bit (simulate processing)
   await new Promise((resolve) => setTimeout(resolve, 500));
+
+  const lang = (formData.get("lang") as "cs" | "en" | "it") || "cs";
+  const t = translations[lang].validation;
+
+  const ContactFormSchema = z.object({
+    name: z.string().min(2, t.name),
+    email: z.string().email(t.email),
+    phone: z.string().min(9, t.phone),
+    message: z.string().min(5, t.message),
+  });
 
   const values = {
     name: formData.get("name") as string,
@@ -44,7 +48,7 @@ export async function handleContactForm(
   if (!validatedFields.success) {
     return {
       success: false,
-      message: "Chyba při vyplňování formuláře.",
+      message: t.formError,
       errors: validatedFields.error.flatten().fieldErrors,
       values,
     };
@@ -54,8 +58,8 @@ export async function handleContactForm(
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "Rent|Back <info@spilberk.com>", // Replace with your verified sender
-      to: "urbanek@spilberk.com", // The user's email or target recipient
+      from: "Rent|Back <info@spilberk.com>",
+      to: "urbanek@spilberk.com",
       subject: `Nová zpráva od: ${name}`,
       react: ContactEmailTemplate({ name, email, phone, message }),
     });
@@ -64,21 +68,20 @@ export async function handleContactForm(
       console.error("Resend error:", error);
       return {
         success: false,
-        message:
-          "Omlouváme se, zprávu se nepodařilo odeslat. Zkuste to prosím později.",
+        message: t.sendError,
         values,
       };
     }
 
     return {
       success: true,
-      message: "Vaše zpráva byla úspěšně odeslána. Brzy se Vám ozveme zpět.",
+      message: t.success,
     };
   } catch (error) {
     console.error("Submission error:", error);
     return {
       success: false,
-      message: "Při odesílání zprávy došlo k neočekávané chybě.",
+      message: t.unexpectedError,
       values,
     };
   }

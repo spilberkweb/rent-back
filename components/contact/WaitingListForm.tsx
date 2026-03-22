@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { Field, FieldLabel, FieldDescription } from "@/components/ui/field";
+import { Field, FieldDescription, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -12,6 +11,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { handleWaitlistForm } from "@/services/handleWaitlistForm";
+import { useState } from "react";
 
 export function WaitingListForm() {
   const { t } = useLanguage();
@@ -19,30 +20,46 @@ export function WaitingListForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(t.contact.joinWaitingList);
+    handleWaitlistForm();
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <Field>
         <FieldLabel htmlFor="wl-name">{t.contact.name}</FieldLabel>
-        <Input id="wl-name" name="name" placeholder={t.contact.name} required minLength={2} />
+        <Input id="wl-name" name="name" placeholder={t.contact.name} />
       </Field>
 
       <Field>
         <FieldLabel htmlFor="wl-email">{t.contact.email}</FieldLabel>
-        <Input id="wl-email" name="email" type="email" placeholder={t.contact.email} required />
+        <Input
+          id="wl-email"
+          name="email"
+          type="email"
+          placeholder={t.contact.email}
+        />
       </Field>
 
       <Field>
         <FieldLabel htmlFor="wl-phone">{t.contact.phone}</FieldLabel>
-        <Input id="wl-phone" name="phone" type="tel" placeholder={t.contact.phone} />
+        <Input
+          id="wl-phone"
+          name="phone"
+          type="tel"
+          placeholder={t.contact.phone}
+        />
       </Field>
 
       <Field>
-        <FieldLabel htmlFor="apartment-count">{t.contact.apartmentCount}</FieldLabel>
+        <FieldLabel htmlFor="apartment-count">
+          {t.contact.apartmentCount}
+        </FieldLabel>
         <FieldDescription>{t.contact.apartmentCountDesc}</FieldDescription>
-        <Select value={apartmentCount} onValueChange={setApartmentCount} required name="apartmentCount">
+        <Select
+          value={apartmentCount}
+          onValueChange={setApartmentCount}
+          name="apartmentCount"
+        >
           <SelectTrigger id="apartment-count" className="mt-1.5">
             <SelectValue placeholder={t.contact.apartmentCountDesc} />
           </SelectTrigger>

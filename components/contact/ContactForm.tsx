@@ -19,7 +19,7 @@ const initialState: ContactFormState = {
 };
 
 export function ContactForm() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const formRef = useRef<HTMLFormElement>(null);
   const [state, formAction, isPending] = useActionState(
     handleContactForm,
@@ -39,6 +39,7 @@ export function ContactForm() {
 
   return (
     <form ref={formRef} action={formAction} className="space-y-4">
+      <input type="hidden" name="lang" value={language} />
       <Field>
         <FieldLabel htmlFor="name">{t.contact.name}</FieldLabel>
         <Input
