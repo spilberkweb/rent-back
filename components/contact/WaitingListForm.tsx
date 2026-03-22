@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { Field, FieldLabel } from "@/components/ui/field";
+import { Field, FieldLabel, FieldDescription } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -41,8 +41,9 @@ export function WaitingListForm() {
 
       <Field>
         <FieldLabel htmlFor="apartment-count">{t.contact.apartmentCount}</FieldLabel>
+        <FieldDescription>{t.contact.apartmentCountDesc}</FieldDescription>
         <Select value={apartmentCount} onValueChange={setApartmentCount} required name="apartmentCount">
-          <SelectTrigger id="apartment-count">
+          <SelectTrigger id="apartment-count" className="mt-1.5">
             <SelectValue placeholder={t.contact.apartmentCountDesc} />
           </SelectTrigger>
           <SelectContent>
@@ -53,7 +54,6 @@ export function WaitingListForm() {
             <SelectItem value="5+">5+</SelectItem>
           </SelectContent>
         </Select>
-        <p className="text-sm text-gray-500 mt-1">{t.contact.apartmentCountDesc}</p>
       </Field>
 
       <Button type="submit" className="w-full bg-[#f59e0b] hover:bg-[#d97706]">
