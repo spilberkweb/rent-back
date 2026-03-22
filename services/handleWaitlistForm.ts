@@ -1,35 +1,86 @@
 "use server";
 
-export async function handleWaitlistForm() {
+import { translations } from "@/app/locales/translations";
+import { z } from "zod";
+
+export type WaitlistFormState = {
+  success: boolean;
+  message: string;
+  errors?: Record<string, string[]>;
+  values?: {
+    name: string;
+    email: string;
+    phone: string;
+    apartmentCount: string;
+  };
+};
+
+export async function handleWaitlistForm(
+  prevState: WaitlistFormState,
+  formData: FormData,
+): Promise<WaitlistFormState> {
+  // Wait for a bit (simulate processing)
+  await new Promise((resolve) => setTimeout(resolve, 500));
+
+  const lang = (formData.get("lang") as "cs" | "en" | "it") || "cs";
+  const t = translations[lang].validation;
+
+  const WaitlistSchema = z.object({
+    name: z.string().min(2, t.name),
+    email: z.string().email(t.email),
+    phone: z.string().min(9, t.phone),
+    apartmentCount: z.string().min(1, "Prosím vyberte počet bytů"),
+  });
+
+  const values = {
+    name: formData.get("name") as string,
+    email: formData.get("email") as string,
+    phone: formData.get("phone") as string,
+    apartmentCount: formData.get("apartmentCount") as string,
+  };
+
+  const validatedFields = WaitlistSchema.safeParse(values);
+
+  if (!validatedFields.success) {
+    return {
+      success: false,
+      message: t.formError,
+      errors: validatedFields.error.flatten().fieldErrors,
+      values,
+    };
+  }
+
   const webhookUrl =
-    "https://hook.eu1.make.com/823uehwf8pbh33i6cgjitjwrm95n8j14"; // Tu získáš po uložení v Make
-  const apiKey = process.env.MAKE_WEBHOOK_API_KEY; // Ideálně uloženo v .env.local
+    "https://hook.eu1.make.com/823uehwf8pbh33i6cgjitjwrm95n8j14";
+  const apiKey = process.env.MAKE_WEBHOOK_API_KEY;
 
   try {
     const response = await fetch(webhookUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-make-apikey": apiKey || "", // Toto je ta hlavička z tvého obrázku
+        "x-make-apikey": apiKey || "",
       },
       body: JSON.stringify({
         timestamp: new Date().toISOString(),
-        data: {
-          name: "David Urbanek",
-          email: "urbanek.dav@email.cz",
-          phone: "5555555",
-          apartmentCount: "2",
-        },
+        data: validatedFields.data,
       }),
     });
 
     if (!response.ok) {
-      throw new Error(`Chyba při odesílání: ${response.statusText}`);
+      throw new Error(`Webhook failed: ${response.statusText}`);
     }
 
-    return { success: true };
+    return {
+      success: true,
+      message: t.success,
+    };
   } catch (error) {
-    console.error("Webhook error:", error);
-    return { success: false, error: "Nepodařilo se odeslat data." };
+    console.error("Waitlist error:", error);
+    return {
+      success: false,
+      message: t.unexpectedError,
+      values,
+    };
   }
 }

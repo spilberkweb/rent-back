@@ -1,9 +1,9 @@
 "use server";
 
+import { translations } from "@/app/locales/translations";
 import { ContactEmailTemplate } from "@/emails/ContactEmailTemplate";
 import { Resend } from "resend";
 import { z } from "zod";
-import { translations } from "@/app/locales/translations";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
