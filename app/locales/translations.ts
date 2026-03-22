@@ -134,6 +134,7 @@ export const translations = {
       apartmentCount: 'Počet bytů',
       apartmentCountDesc: 'O kolik bytů máte zájem?',
       joinWaitingList: 'Zapsat se na čekací listinu',
+      sending: 'Odesílám...',
     },
     howItWorksPage: {
       title: 'Jak funguje RENT|BACK',
@@ -301,6 +302,7 @@ export const translations = {
       apartmentCount: 'Number of Apartments',
       apartmentCountDesc: 'How many apartments are you interested in?',
       joinWaitingList: 'Join Waiting List',
+      sending: 'Sending...',
     },
     howItWorksPage: {
       title: 'How RENT|BACK Works',
@@ -468,6 +470,7 @@ export const translations = {
       apartmentCount: 'Numero di Appartamenti',
       apartmentCountDesc: 'A quanti appartamenti sei interessato?',
       joinWaitingList: 'Iscriviti alla Lista d\'Attesa',
+      sending: 'Invio in corso...',
     },
     howItWorksPage: {
       title: 'Come Funziona RENT|BACK',
