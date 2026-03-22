@@ -4,12 +4,9 @@ import { useLanguage } from "@/app/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Shield, TrendingUp } from "lucide-react";
 import Link from "next/link";
-const balconyImage =
-  "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=800&q=80";
-const bedroomImage =
-  "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80";
-const studioImage =
-  "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80";
+const balconyImage = "/assets/hero-img-1.png";
+const bedroomImage = "/assets/hero-img-2.png";
+const studioImage = "/assets/hero-img-3.png";
 
 export function HeroSection() {
   const { t } = useLanguage();
