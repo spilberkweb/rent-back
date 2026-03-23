@@ -75,7 +75,7 @@ export const translations = {
     },
     financial: {
       badge: "Finanční model",
-      title: "Transparentní a prédikovatelný výnos",
+      title: "Transparentní a predikovatelný výnos",
       subtitle: "Přesně víte, kolik vyděláte měsíčně i za celých 10 let",
       propertyPrice: "Cena nemovitosti",
       monthlyIncome: "Měsíční příjem",
