@@ -94,8 +94,8 @@ export function ChartSection() {
                     {t.chart.cardDescription}
                   </CardDescription>
                 </div>
-                <div className="flex items-center gap-2 bg-[#C00000] text-white px-4 py-2 rounded-full text-sm font-semibold self-start md:self-auto">
-                  <TrendingUp className="h-4 w-4 text-white" />
+                <div className="flex items-center gap-2 bg-red-50 text-red-700 px-4 py-1.5 rounded-full text-sm font-semibold self-start md:self-auto border border-red-100 shadow-sm">
+                  <TrendingUp className="h-4 w-4 text-red-500" />
                   {t.chart.average}
                 </div>
               </div>

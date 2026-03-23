@@ -6,7 +6,7 @@ import Link from "next/link";
 const logoWhite = "/rent-back-white.svg";
 
 export function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <footer className="bg-[#0f172a] text-white">
@@ -74,7 +74,44 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+        <div className="border-t border-gray-800 mt-12 pt-12 pb-8">
+          <div className="max-w-5xl mx-auto text-center space-y-8 text-gray-400 text-[11px] leading-relaxed opacity-80">
+            <p>{t.footer.disclaimer.spilberk}</p>
+            <p>{t.footer.disclaimer.avant}</p>
+            <p>
+              {language === "cs" ? (
+                <>
+                  Sdělení klíčových informací fondu (KID) je k dispozici na{" "}
+                  <a
+                    href="https://www.avantfunds.cz/cz/informacni-povinnost/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-white transition-colors"
+                  >
+                    https://www.avantfunds.cz/cz/informacni-povinnost/
+                  </a>
+                  . V listinné podobě lze uvedené informace získat v sídle
+                  společnosti AVANT investiční společnost, a.s., City Tower,
+                  Hvězdova 1716/2b, 140 00 Praha 4 - Nusle. Další důležité
+                  informace pro investory na:{" "}
+                  <a
+                    href="https://www.avantfunds.cz/cz/dulezite-informace/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-white transition-colors"
+                  >
+                    https://www.avantfunds.cz/cz/dulezite-informace/
+                  </a>
+                  .
+                </>
+              ) : (
+                t.footer.disclaimer.kid
+              )}
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-8 text-center text-gray-500 text-sm">
           <p>&copy; 2026 Rent|Back. {t.footer.rights}</p>
         </div>
       </div>

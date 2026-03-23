@@ -229,6 +229,11 @@ export const translations = {
       contact: "Kontakt",
       rights: "Všechna práva vyhrazena.",
       privacy: "Ochrana osobních údajů",
+      disclaimer: {
+        spilberk: "SPILBERK investiční fond SICAV, a.s. je fondem kvalifikovaných investorů dle zákona č. 240/2013 Sb. o investičních společnostech a investičních fondech, jeho akcionářem se může stát výhradně kvalifikovaný investor dle § 272 tohoto zákona.",
+        avant: "AVANT investiční společnost, a.s., je správcem fondů kvalifikovaných investorů dle zákona 240/2013 Sb. a jejich akcionářem nebo podílníkem se může stát kvalifikovaný investor dle paragrafu 272 tohoto zákona.",
+        kid: "Sdělení klíčových informací fondu (KID) je k dispozici na https://www.avantfunds.cz/cz/informacni-povinnost/. V listinné podobě lze uvedené informace získat v sídle společnosti AVANT investiční společnost, a.s., City Tower, Hvězdova 1716/2b, 140 00 Praha 4 - Nusle. Další důležité informace pro investory na: https://www.avantfunds.cz/cz/dulezite-informace/."
+      }
     },
   },
   en: {
@@ -463,6 +468,11 @@ export const translations = {
       contact: "Contact",
       rights: "All rights reserved.",
       privacy: "Privacy Policy",
+      disclaimer: {
+        spilberk: "SPILBERK investiční fond SICAV, a.s. is a fund of qualified investors according to Act No. 240/2013 Coll. on Investment Companies and Investment Funds, its shareholder can only be a qualified investor according to Section 272 of this Act.",
+        avant: "AVANT investiční společnost, a.s., is the manager of funds of qualified investors according to Act 240/2013 Coll. and their shareholder or partner can only be a qualified investor according to paragraph 272 of this Act.",
+        kid: "Key Information Document (KID) is available at https://www.avantfunds.cz/cz/informacni-povinnost/. In paper form, the mentioned information can be obtained at the headquarters of AVANT investiční společnost, a.s., City Tower, Hvězdova 1716/2b, 140 00 Prague 4 - Nusle. Other important information for investors at: https://www.avantfunds.cz/cz/dulezite-informace/."
+      }
     },
   },
   it: {
@@ -701,6 +711,11 @@ export const translations = {
       contact: "Contatto",
       rights: "Tutti i diritti riservati.",
       privacy: "Informativa sulla Privacy",
+      disclaimer: {
+        spilberk: "SPILBERK investiční fond SICAV, a.s. è un fondo di investitori qualificati ai sensi della legge n. 240/2013 Coll. sulle società di investimento e i fondi comuni di investimento, il suo azionista può essere esclusivamente un investitore qualificato ai sensi dell'articolo 272 della presente legge.",
+        avant: "AVANT investiční společnost, a.s., è il gestore dei fondi di investitori qualificati ai sensi della legge 240/2013 Coll. e il loro azionista o socio può essere esclusivamente un investitore qualificato ai sensi del paragrafo 272 della presente legge.",
+        kid: "Il documento contenente le informazioni chiave (KID) è disponibile su https://www.avantfunds.cz/cz/informacni-povinnost/. In formato cartaceo, le suddette informazioni possono essere ottenute presso la sede di AVANT investiční společnost, a.s., City Tower, Hvězdova 1716/2b, 140 00 Praga 4 - Nusle. Altre informazioni importanti pro investory na: https://www.avantfunds.cz/cz/dulezite-informace/."
+      }
     },
   },
 };
