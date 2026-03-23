@@ -46,6 +46,12 @@ export function Footer() {
               >
                 {t.nav.contact}
               </Link>
+              <Link
+                href="/zasady-ochrany-osobnich-udaju"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                {t.footer.privacy}
+              </Link>
             </nav>
           </div>
 

@@ -12,6 +12,7 @@ import {
 import { Loader2 } from "lucide-react";
 import { useActionState, useEffect, useRef } from "react";
 import { toast } from "sonner";
+import Link from "next/link";
 
 const initialState: ContactFormState = {
   success: false,
@@ -111,6 +112,16 @@ export function ContactForm() {
           t.contact.send
         )}
       </Button>
+      <p className="text-[11px] text-gray-500 mt-4 leading-relaxed">
+        {t.contact.privacyDisclaimer}{" "}
+        <Link
+          href="/zasady-ochrany-osobnich-udaju"
+          className="underline hover:text-[#1e3a8a] transition-colors"
+        >
+          {t.contact.privacyLink}
+        </Link>
+        .
+      </p>
     </form>
   );
 }

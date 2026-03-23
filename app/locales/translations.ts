@@ -90,6 +90,17 @@ export const translations = {
       tryCalculator: "Vyzkoušejte naši kalkulačku",
       calculateReturn: "Spočítejte si svůj výnos",
     },
+    chart: {
+      title: "Meziroční růst cen nemovitostí",
+      subtitle: "Historický vývoj cen bytů v České republice (2016–2025)",
+      description: "Historický vývoj cen bytů v České republice ukazuje stabilní dlouhodobý růst, který je klíčovým faktorem pro zhodnocení vašich investic.",
+      cardTitle: "Vývoj cen 2016 – 2025",
+      cardDescription: "Procentuální změna oproti předchozímu roku",
+      average: "Průměr 9,6 %",
+      averageFull: "Průměrný meziroční růst za posledních 10 let činí 9,6 %",
+      sources: "Zdroje: ČSÚ (House Price Index), ČNB, ČSOB Index bydlení, Deloitte Real Index. Data za rok 2025 jsou předběžná. Zpracováno v březnu 2026.",
+      label: "Meziroční růst"
+    },
     howItWorks: {
       title: "Jak to",
       titleHighlight: "funguje",
@@ -151,6 +162,21 @@ export const translations = {
       apartmentCountDesc: "O kolik bytů máte zájem?",
       joinWaitingList: "Zapsat se na čekací listinu",
       sending: "Odesílám...",
+      privacyDisclaimer: "Odesláním formuláře beru na vědomí, že společnost Rent|Back bude zpracovávat mé osobní údaje za účelem vyřízení poptávky/zápisu na čekací listinu. Více informací naleznete v ",
+      privacyLink: "Zásadách ochrany osobních údajů",
+    },
+    privacy: {
+      title: "Zásady ochrany osobních údajů",
+      controller: "Kdo je správce",
+      controllerValue: "Rent|Back, IČO: [Vaše IČO], Adresa: [Vaše adresa]",
+      dataCollected: "Jaké údaje sbíráme",
+      dataCollectedValue: "Jméno, e-mail, telefon",
+      purpose: "Proč je sbíráme",
+      purposeValue: "Realizace obchodu, odpověď na dotaz",
+      retention: "Jak dlouho je držíme",
+      retentionValue: "Po dobu trvání jednání nebo 2 roky",
+      rights: "Práva uživatele",
+      rightsValue: "Právo na výmaz, přístup k údajům, odvolání souhlasu",
     },
     validation: {
       name: "Jméno musí mít alespoň 2 znaky",
@@ -198,6 +224,7 @@ export const translations = {
       quickLinks: "Rychlé odkazy",
       contact: "Kontakt",
       rights: "Všechna práva vyhrazena.",
+      privacy: "Ochrana osobních údajů",
     },
   },
   en: {
@@ -293,6 +320,17 @@ export const translations = {
       tryCalculator: "Try Our Calculator",
       calculateReturn: "Calculate Your Return",
     },
+    chart: {
+      title: "Year-over-Year Real Estate Price Growth",
+      subtitle: "Historical development of apartment prices in the Czech Republic (2016–2025)",
+      description: "The historical development of apartment prices in the Czech Republic shows stable long-term growth, which is a key factor for your investment appreciation.",
+      cardTitle: "Price Development 2016 – 2025",
+      cardDescription: "Percentage change compared to the previous year",
+      average: "Average 9.6 %",
+      averageFull: "The average year-over-year growth over the last 10 years is 9.6%",
+      sources: "Sources: CZSO (House Price Index), CNB, ČSOB Housing Index, Deloitte Real Index. Data for 2025 are preliminary. Processed in March 2026.",
+      label: "YoY Growth"
+    },
     howItWorks: {
       title: "How it",
       titleHighlight: "works",
@@ -352,6 +390,21 @@ export const translations = {
       apartmentCountDesc: "How many apartments are you interested in?",
       joinWaitingList: "Join Waiting List",
       sending: "Sending...",
+      privacyDisclaimer: "By submitting the form, I acknowledge that the company Rent|Back will process my personal data for the purpose of handling my inquiry/joining the waiting list. More information can be found in the ",
+      privacyLink: "Privacy Policy",
+    },
+    privacy: {
+      title: "Privacy Policy",
+      controller: "Who is the controller",
+      controllerValue: "Rent|Back, ID: [Your ID], Address: [Your address]",
+      dataCollected: "What data we collect",
+      dataCollectedValue: "Name, email, phone",
+      purpose: "Why we collect it",
+      purposeValue: "Business realization, responding to inquiries",
+      retention: "How long we keep it",
+      retentionValue: "For the duration of the negotiations or 2 years",
+      rights: "User rights",
+      rightsValue: "Right to deletion, access to data, withdrawal of consent",
     },
     validation: {
       name: "Name must have at least 2 characters",
@@ -401,6 +454,7 @@ export const translations = {
       quickLinks: "Quick Links",
       contact: "Contact",
       rights: "All rights reserved.",
+      privacy: "Privacy Policy",
     },
   },
   it: {
@@ -496,6 +550,17 @@ export const translations = {
         "Sei il proprietario per l'intero periodo. Dopo 10 anni, puoi affittare la proprietà da solo o restituirla a noi per il leasing. Rivalutazione totale: 1,74M CZK da affitto + ~4,0M CZK rivalutazione = 5,75M CZK profitto su investimento di 4M CZK",
       tryCalculator: "Prova il Nostro Calcolatore",
       calculateReturn: "Calcola il Tuo Rendimento",
+    },
+    chart: {
+      title: "Crescita Annuale dei Prezzi Immobiliari",
+      subtitle: "Sviluppo storico dei prezzi degli appartamenti in Repubblica Ceca (2016–2025)",
+      description: "Lo sviluppo storico dei prezzi degli appartamenti in Repubblica Ceca mostra una crescita stabile a lungo termine, che è un fattore chiave per la rivalutazione del tuo investimento.",
+      cardTitle: "Sviluppo dei Prezzi 2016 – 2025",
+      cardDescription: "Variazione percentuale rispetto all'anno precedente",
+      average: "Media 9,6 %",
+      averageFull: "La crescita media annuale negli ultimi 10 anni è del 9,6%",
+      sources: "Fonti: CZSO (Indice dei prezzi delle case), CNB, Indice immobiliare ČSOB, Deloitte Real Index. I dati per il 2025 sono preliminari. Elaborato a marzo 2026.",
+      label: "Crescita YoY"
     },
     howItWorks: {
       title: "Come",

@@ -6,6 +6,7 @@ import { PropertyGallerySection } from "@/components/home/PropertyGallerySection
 import { FinancialSection } from "@/components/home/FinancialSection";
 import { InvestmentModel } from "@/components/InvestmentModel";
 import { CTASection } from "@/components/home/CTASection";
+import { ChartSection } from "@/components/home/Chart";
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
       <BenefitsSection />
       <PropertyGallerySection />
       <FinancialSection />
+      <ChartSection />
       <HowItWorksSection />
       <InvestmentModel />
       <CTASection />

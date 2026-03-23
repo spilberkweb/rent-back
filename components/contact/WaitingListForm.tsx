@@ -23,6 +23,7 @@ import {
 import { Loader2 } from "lucide-react";
 import { useActionState, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
+import Link from "next/link";
 
 const initialState: WaitlistFormState = {
   success: false,
@@ -140,6 +141,16 @@ export function WaitingListForm() {
           t.contact.joinWaitingList
         )}
       </Button>
+      <p className="text-[11px] text-gray-500 mt-4 leading-relaxed">
+        {t.contact.privacyDisclaimer}{" "}
+        <Link
+          href="/zasady-ochrany-osobnich-udaju"
+          className="underline hover:text-[#f59e0b] transition-colors"
+        >
+          {t.contact.privacyLink}
+        </Link>
+        .
+      </p>
     </form>
   );
 }
