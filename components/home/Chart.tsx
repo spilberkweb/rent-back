@@ -131,6 +131,7 @@ export function ChartSection() {
                     tickMargin={12}
                     tick={{ fill: "#64748B", fontSize: 12 }}
                     tickFormatter={(value) => `${value}%`}
+                    domain={[0, "auto"]}
                   />
                   <ChartTooltip
                     cursor={{ stroke: "#CBD5E1", strokeWidth: 1 }}
@@ -159,10 +160,16 @@ export function ChartSection() {
                     }}
                   />
                   <ReferenceLine
+                    y={0}
+                    stroke="#1E3A8A"
+                    strokeWidth={2}
+                    strokeOpacity={0.8}
+                  />
+                  <ReferenceLine
                     y={9.6}
-                    stroke="#94A3B8"
-                    strokeDasharray="5 5"
-                    strokeWidth={1.5}
+                    stroke="#CBD5E1"
+                    strokeDasharray="4 4"
+                    strokeWidth={1}
                   />
                   <Line
                     dataKey="growth"
