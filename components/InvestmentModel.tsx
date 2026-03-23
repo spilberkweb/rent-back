@@ -334,14 +334,14 @@ export function InvestmentModel() {
             {
               label: t.calculator.totalProfit.toUpperCase(),
               value: fmtM(final.totalProfit),
-              color: O,
+              color: "#10b981",
               sub: "CZK",
               big: true,
             },
             {
               label: t.calculator.roi.toUpperCase(),
               value: returnPctFormatted + " %",
-              color: O,
+              color: "#10b981",
               sub: "",
               big: true,
             },
@@ -353,14 +353,14 @@ export function InvestmentModel() {
                   flex: k.big ? "1 1 200px" : "1 1 140px",
                   minWidth: 130,
                   background: k.big
-                    ? "rgba(255,107,53,0.08)"
+                    ? "rgba(16,185,129,0.08)"
                     : k.bold
                       ? "rgba(139,159,255,0.08)"
                       : "rgba(255,255,255,0.03)",
                   borderRadius: 12,
                   padding: k.big ? "16px 18px" : "12px 14px",
                   border: k.big
-                    ? "1px solid rgba(255,107,53,0.2)"
+                    ? "1px solid rgba(16,185,129,0.2)"
                     : k.bold
                       ? "1px solid rgba(139,159,255,0.2)"
                       : "1px solid rgba(255,255,255,0.04)",
@@ -372,6 +372,9 @@ export function InvestmentModel() {
                     color: "rgba(255,255,255,0.35)",
                     letterSpacing: 1,
                     marginBottom: 4,
+                    height: 28,
+                    display: "flex",
+                    alignItems: "flex-start"
                   }}
                 >
                   {k.label}
@@ -440,10 +443,10 @@ export function InvestmentModel() {
               }}
             >
               {(language === "cs"
-                ? "Nájem: "
+                ? "Fixní nájem: "
                 : language === "it"
-                  ? "Affitto: "
-                  : "Rent: ") +
+                  ? "Affitto fisso: "
+                  : "Fixed Rent: ") +
                 ((final.cumRent / final.totalProfit) * 100)
                   .toFixed(1)
                   .replace(".", language === "cs" ? "," : ".") +
