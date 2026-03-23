@@ -122,9 +122,9 @@ export function InvestorBenefitsSection() {
                   <div className="bg-white/70 rounded-xl p-4 border border-gray-200">
                     <div className="text-sm text-gray-600 mb-1">
                       {t.investorBenefits.propertyValue}
-                      <span className="block text-[10px] text-gray-400 font-normal leading-tight">{t.investorBenefits.appreciationRate}</span>
                     </div>
                     <div className="text-2xl font-bold text-[#3b82f6]">~10,0 mil Kč</div>
+                    <div className="text-[10px] text-gray-400 font-normal leading-tight mt-1">{t.investorBenefits.appreciationRate}</div>
                   </div>
                 </div>
                 <div className="mt-6 pt-6 border-t border-gray-200">

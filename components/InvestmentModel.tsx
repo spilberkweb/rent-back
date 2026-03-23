@@ -9,8 +9,8 @@ const GOLD = "#C8A96E";
 
 export function InvestmentModel() {
   const { t, language } = useLanguage();
-  const [price, setPrice] = useState(4000000);
-  const [yld, setYld] = useState(3.5);
+  const [price, setPrice] = useState(5000000);
+  const yld = 3.5;
   const [growth, setGrowth] = useState(7.2);
 
   const locale =
@@ -233,23 +233,14 @@ export function InvestmentModel() {
             >
               {t.calculator.rentalYield.toUpperCase()}
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <input
-                type="range"
-                min="2"
-                max="3.5"
-                step="0.1"
-                value={yld}
-                onChange={(e) => setYld(Number(e.target.value))}
-                style={{ flex: 1, accentColor: GOLD }}
-              />
+            <div style={{ display: "flex", alignItems: "center", gap: 8, height: 32 }}>
               <span
                 style={{
                   fontSize: 18,
                   fontWeight: 800,
                   color: GOLD,
-                  minWidth: 50,
-                  textAlign: "right",
+                  flex: 1,
+                  textAlign: "center",
                 }}
               >
                 {yld.toFixed(1) + " %"}

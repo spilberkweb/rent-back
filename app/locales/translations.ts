@@ -170,7 +170,7 @@ export const translations = {
     privacy: {
       title: "Zásady ochrany osobních údajů",
       controller: "Kdo je správce",
-      controllerValue: "Rent|Back, IČO: [Vaše IČO], Adresa: [Vaše adresa]",
+      controllerValue: "Rent|Back, IČO: 05194148, Adresa: Trnitá 500/9, 602 00 Brno",
       dataCollected: "Jaké údaje sbíráme",
       dataCollectedValue: "Jméno, e-mail, telefon",
       purpose: "Proč je sbíráme",
@@ -402,7 +402,7 @@ export const translations = {
     privacy: {
       title: "Privacy Policy",
       controller: "Who is the controller",
-      controllerValue: "Rent|Back, ID: [Your ID], Address: [Your address]",
+      controllerValue: "Rent|Back, ID: 05194148, Address: Trnitá 500/9, 602 00 Brno",
       dataCollected: "What data we collect",
       dataCollectedValue: "Name, email, phone",
       purpose: "Why we collect it",
@@ -640,7 +640,7 @@ export const translations = {
     privacy: {
       title: "Informativa sulla Privacy",
       controller: "Chi è il titolare",
-      controllerValue: "Rent|Back, ID: [Il tuo ID], Indirizzo: [Il tuo indirizzo]",
+      controllerValue: "Rent|Back, ID: 05194148, Indirizzo: Trnitá 500/9, 602 00 Brno",
       dataCollected: "Quali dati raccogliamo",
       dataCollectedValue: "Nome, e-mail, telefono",
       purpose: "Perché li raccogliamo",
