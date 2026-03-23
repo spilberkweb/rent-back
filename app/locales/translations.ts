@@ -76,6 +76,7 @@ export const translations = {
       badge: "Finanční model",
       title: "Transparentní a prédikovatelný výnos",
       subtitle: "Přesně víte, kolik vyděláte měsíčně i za celých 10 let",
+      propertyPrice: "Cena nemovitosti",
       monthlyIncome: "Měsíční příjem",
       monthlyIncomeDesc: "Stabilní cash-flow každý měsíc",
       yearlyYield: "Roční výnos",
@@ -86,7 +87,7 @@ export const translations = {
       capitalGrowthDesc: "Při 7,2% ročně za 10 let",
       propertyOwnership: "Po 10 letech končí smlouva o zpětném nájmu",
       propertyOwnershipDesc:
-        "Jste vlastníkem po celou dobu. Po 10 letech si můžete nemovitost pronajmout sami nebo nám ji dát opět do nájmu. Celkové zhodnocení: 1,74M Kč z nájmu + ~4,0M Kč zhodnocení = 5,75M Kč zisk při investici 4M Kč",
+        "Jste vlastníkem po celou dobu. Po 10 letech si můžete nemovitost pronajmout sami nebo nám ji dát opět do nájmu. Celkové zhodnocení: 1,74M Kč z nájmu + 5,0M Kč zhodnocení = 6,74M Kč zisk při investici 5M Kč",
       tryCalculator: "Vyzkoušejte naši kalkulačku",
       calculateReturn: "Spočítejte si svůj výnos",
     },
@@ -308,6 +309,7 @@ export const translations = {
       title: "Transparent and Predictable Returns",
       subtitle:
         "Know exactly how much you will earn monthly and over the full 10 years",
+      propertyPrice: "Property Price",
       monthlyIncome: "Monthly Income",
       monthlyIncomeDesc: "Stable cash-flow every month",
       yearlyYield: "Annual Yield",
@@ -316,9 +318,9 @@ export const translations = {
       totalReturnDesc: "Total rent for 120 months",
       capitalGrowth: "Property Appreciation",
       capitalGrowthDesc: "At 7.2% annually over 10 years",
-      propertyOwnership: "After 10 years, the leaseback contract ends",
+      propertyOwnership: "After 10 years, the leaseback agreement ends",
       propertyOwnershipDesc:
-        "You are the owner for the entire period. After 10 years, you can rent the property yourself or return it to us for leasing. Total appreciation: 1.74M CZK from rent + ~4.0M CZK appreciation = 5.75M CZK profit on 4M CZK investment",
+        "You are the owner for the entire duration. After 10 years, you can rent the property yourself or lease it back to us again. Total appreciation: 1.74M CZK from rent + 5.0M CZK appreciation = 6.74M CZK profit on a 5M CZK investment",
       tryCalculator: "Try Our Calculator",
       calculateReturn: "Calculate Your Return",
     },
@@ -541,6 +543,7 @@ export const translations = {
       title: "Rendimenti Trasparenti e Prevedibili",
       subtitle:
         "Sappi esattamente quanto guadagnerai mensilmente e nei 10 anni completi",
+      propertyPrice: "Prezzo Immobile",
       monthlyIncome: "Reddito Mensile",
       monthlyIncomeDesc: "Cash-flow stabile ogni mese",
       yearlyYield: "Rendimento Annuo",
@@ -551,7 +554,7 @@ export const translations = {
       capitalGrowthDesc: "Al 7,2% annuo in 10 anni",
       propertyOwnership: "Dopo 10 anni, il contratto di leaseback termina",
       propertyOwnershipDesc:
-        "Sei il proprietario per l'intero periodo. Dopo 10 anni, puoi affittare la proprietà da solo o restituirla a noi per il leasing. Rivalutazione totale: 1,74M CZK da affitto + ~4,0M CZK rivalutazione = 5,75M CZK profitto su investimento di 4M CZK",
+        "Siete proprietari per l'intera durata. Dopo 10 anni, potete affittare la proprietà voi stessi o affittarla di nuovo a noi. Rivalutazione totale: 1,74M CZK dall'affitto + 5,0M CZK di rivalutazione = 6,74M CZK di profitto su un investimento di 5M CZK",
       tryCalculator: "Prova il Nostro Calcolatore",
       calculateReturn: "Calcola il Tuo Rendimento",
     },

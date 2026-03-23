@@ -4,9 +4,10 @@ import { useLanguage } from "@/app/contexts/LanguageContext";
 import { Info, TrendingUp } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import {
+  Bar,
+  BarChart,
   CartesianGrid,
-  Line,
-  LineChart,
+  Cell,
   ReferenceLine,
   XAxis,
   YAxis,
@@ -104,11 +105,11 @@ export function ChartSection() {
                 config={chartConfig}
                 className="h-[400px] w-full mt-8"
               >
-                <LineChart
+                <BarChart
                   data={chartData}
                   margin={{
                     left: 0,
-                    right: 20,
+                    right: 40,
                     top: 20,
                     bottom: 20,
                   }}
@@ -131,7 +132,8 @@ export function ChartSection() {
                     tickMargin={12}
                     tick={{ fill: "#64748B", fontSize: 12 }}
                     tickFormatter={(value) => `${value}%`}
-                    domain={[0, "auto"]}
+                    domain={[-10, 25]}
+                    ticks={[-10, -5, 0, 5, 10, 15, 20, 25]}
                   />
                   <ChartTooltip
                     cursor={{ stroke: "#CBD5E1", strokeWidth: 1 }}
@@ -166,34 +168,33 @@ export function ChartSection() {
                     strokeOpacity={0.8}
                   />
                   <ReferenceLine
-                    y={9.6}
-                    stroke="#CBD5E1"
+                    y={10}
+                    stroke="#f59e0b"
                     strokeDasharray="4 4"
-                    strokeWidth={1}
+                    strokeWidth={2}
+                    label={{
+                      position: "right",
+                      value: "10%",
+                      fill: "#f59e0b",
+                      fontSize: 10,
+                      fontWeight: "bold",
+                    }}
                   />
-                  <Line
+                  <Bar
                     dataKey="growth"
-                    type="natural"
-                    stroke="var(--color-growth)"
-                    strokeWidth={4}
+                    radius={[6, 6, 0, 0]}
                     isAnimationActive={isVisible}
-                    animationDuration={2000}
-                    animationEasing="ease-in-out"
-                    dot={{
-                      fill: "white",
-                      stroke: "var(--color-growth)",
-                      strokeWidth: 2,
-                      r: 5,
-                      fillOpacity: 1,
-                    }}
-                    activeDot={{
-                      fill: "var(--color-growth)",
-                      stroke: "white",
-                      strokeWidth: 2,
-                      r: 7,
-                    }}
-                  />
-                </LineChart>
+                    animationDuration={1500}
+                  >
+                    {chartData.map((entry, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={entry.growth >= 10 ? "#1e3a8a" : "#3b82f6"}
+                        fillOpacity={entry.growth < 0 ? 0.6 : 1}
+                      />
+                    ))}
+                  </Bar>
+                </BarChart>
               </ChartContainer>
             </CardContent>
             <CardFooter className="bg-[#F8FAFC] p-8 border-t border-slate-100">

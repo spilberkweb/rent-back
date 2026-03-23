@@ -12,7 +12,7 @@ const logoLight = "/imports/RENTBACK_02_primary_light.svg";
 
 export function Header() {
   const pathname = usePathname();
-  const { t } = useLanguage();
+  const { t, language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   const isActive = (path: string) => {
@@ -97,9 +97,32 @@ export function Header() {
               
               <div className="mt-auto p-6 bg-gray-50 border-t border-gray-100 flex flex-col gap-6">
                 <div className="flex flex-col gap-3">
-                  <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">JAZYK / LANGUAGE</span>
-                  <div className="bg-white rounded-lg p-1 border border-gray-200">
-                    <LanguageSelector />
+                  <span className="text-xs font-bold text-gray-400 uppercase tracking-widest px-1">
+                    JAZYK / LANGUAGE
+                  </span>
+                  <div className="grid grid-cols-3 gap-2">
+                    {[
+                      { code: "cs", flag: "🇨🇿", label: "CZ" },
+                      { code: "en", flag: "🇬🇧", label: "EN" },
+                      { code: "it", flag: "🇮🇹", label: "IT" },
+                    ].map((lang) => {
+                      return (
+                        <button
+                          key={lang.code}
+                          onClick={() => {
+                            setLanguage(lang.code as any);
+                          }}
+                          className={`flex items-center justify-center gap-2 py-3 rounded-xl border transition-all ${
+                            language === lang.code
+                              ? "bg-[#1e3a8a] border-[#1e3a8a] text-white font-bold shadow-md"
+                              : "bg-white border-gray-200 text-gray-600 hover:border-[#1e3a8a]/30"
+                          }`}
+                        >
+                          <span className="text-lg">{lang.flag}</span>
+                          <span className="text-sm">{lang.label}</span>
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
                 <Link onClick={() => setIsOpen(false)} href="/kontakt">
