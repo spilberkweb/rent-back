@@ -22,19 +22,10 @@ export default function Page() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h2 className="text-2xl font-semibold text-[#1e3a8a] mb-4">
-                {t.contact.getInTouch}
-              </h2>
-              <Card className="mb-6">
-                <CardContent className="p-6">
-                  <ContactForm />
-                </CardContent>
-              </Card>
-
               {/* Waiting List Section */}
               <Card
                 id="waiting-list"
-                className="border-2 border-[#f59e0b]/30 bg-gradient-to-br from-[#f59e0b]/5 to-white shadow-2xl"
+                className="border-2 border-[#f59e0b]/30 bg-gradient-to-br from-[#f59e0b]/5 to-white shadow-2xl mb-8"
               >
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
@@ -49,6 +40,15 @@ export default function Page() {
                     {t.contact.waitingListSubtitle}
                   </p>
                   <WaitingListForm />
+                </CardContent>
+              </Card>
+
+              <h2 className="text-2xl font-semibold text-[#1e3a8a] mb-4">
+                {t.contact.getInTouch}
+              </h2>
+              <Card className="mb-6">
+                <CardContent className="p-6">
+                  <ContactForm />
                 </CardContent>
               </Card>
             </div>
