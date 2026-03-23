@@ -109,7 +109,7 @@ export function InvestorBenefitsSection() {
                 <div className="grid md:grid-cols-4 gap-6">
                   <div className="bg-white/70 rounded-xl p-4 border border-gray-200">
                     <div className="text-sm text-gray-600 mb-1">{t.investorBenefits.investment}</div>
-                    <div className="text-2xl font-bold text-[#1e3a8a]">4,0 mil Kč</div>
+                    <div className="text-2xl font-bold text-[#1e3a8a]">5,0 mil Kč</div>
                   </div>
                   <div className="bg-white/70 rounded-xl p-4 border border-gray-200">
                     <div className="text-sm text-gray-600 mb-1">{t.investorBenefits.monthlyRent}</div>
@@ -120,16 +120,19 @@ export function InvestorBenefitsSection() {
                     <div className="text-2xl font-bold text-[#10b981]">1,74 mil Kč</div>
                   </div>
                   <div className="bg-white/70 rounded-xl p-4 border border-gray-200">
-                    <div className="text-sm text-gray-600 mb-1">{t.investorBenefits.propertyValue}</div>
-                    <div className="text-2xl font-bold text-[#3b82f6]">~8,0 mil Kč</div>
+                    <div className="text-sm text-gray-600 mb-1">
+                      {t.investorBenefits.propertyValue}
+                      <span className="block text-[10px] text-gray-400 font-normal leading-tight">{t.investorBenefits.appreciationRate}</span>
+                    </div>
+                    <div className="text-2xl font-bold text-[#3b82f6]">~10,0 mil Kč</div>
                   </div>
                 </div>
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <div className="text-sm text-gray-600 mb-2">{t.investorBenefits.totalProfit}</div>
                   <div className="text-4xl font-bold bg-gradient-to-r from-[#f59e0b] to-[#ef4444] bg-clip-text text-transparent">
-                    +5,74 mil Kč
+                    +6,74 mil Kč
                   </div>
-                  <div className="text-sm text-gray-500 mt-1">≈ 143% návratnost investice</div>
+                  <div className="text-sm text-gray-500 mt-1">{t.investorBenefits.roi}</div>
                 </div>
               </div>
             </CardContent>

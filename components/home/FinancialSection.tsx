@@ -41,7 +41,7 @@ export function FinancialSection() {
               <div className="w-12 h-12 bg-[#f59e0b] rounded-xl flex items-center justify-center mb-4">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
-              <div className="text-2xl font-bold text-[#fbbf24] mb-2">14 600 Kč</div>
+              <div className="text-2xl font-bold text-[#fbbf24] mb-2">14 500 Kč</div>
               <h3 className="text-base mb-1">{t.financial.monthlyIncome}</h3>
               <p className="text-xs text-gray-300">{t.financial.monthlyIncomeDesc}</p>
             </CardContent>

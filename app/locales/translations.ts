@@ -47,7 +47,8 @@ export const translations = {
       rent10Years: "Za 10 let nájem",
       propertyValue: "Hodnota bytu",
       totalProfit: "Celkový zisk po 10 letech",
-      roi: "≈ 90% návratnost investice",
+      roi: "≈ 135% návratnost investice",
+      appreciationRate: "při 7,2 % p.a.",
     },
     benefits: {
       title: "Proč",
@@ -279,7 +280,8 @@ export const translations = {
       rent10Years: "10 Years Rent",
       propertyValue: "Property Value",
       totalProfit: "Total Profit After 10 Years",
-      roi: "≈ 90% return on investment",
+      roi: "≈ 135% return on investment",
+      appreciationRate: "at 7.2% p.a.",
     },
     benefits: {
       title: "Why",
@@ -513,7 +515,8 @@ export const translations = {
       rent10Years: "Affitto 10 Anni",
       propertyValue: "Valore Immobile",
       totalProfit: "Profitto Totale Dopo 10 Anni",
-      roi: "≈ 90% ritorno sull'investimento",
+      roi: "≈ 135% ritorno sull'investimento",
+      appreciationRate: "al 7,2 % p.a.",
     },
     benefits: {
       title: "Perché",
