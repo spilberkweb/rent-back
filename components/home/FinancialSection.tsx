@@ -1,14 +1,21 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle2, TrendingUp, Calendar, Percent, BarChart3, Home } from "lucide-react";
 import { useLanguage } from "@/app/contexts/LanguageContext";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  BarChart3,
+  Calendar,
+  CheckCircle2,
+  Home,
+  Percent,
+  TrendingUp,
+} from "lucide-react";
+import Link from "next/link";
 
 export function FinancialSection() {
   const { t } = useLanguage();
-  
+
   return (
     <section className="py-20 bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] text-white">
       <div className="container mx-auto px-4">
@@ -16,9 +23,7 @@ export function FinancialSection() {
           <div className="inline-block px-4 py-2 bg-[#f59e0b]/20 border border-[#f59e0b]/30 rounded-full text-[#fbbf24] text-sm mb-4">
             {t.financial.badge}
           </div>
-          <h2 className="text-3xl md:text-4xl mb-4">
-            {t.financial.title}
-          </h2>
+          <h2 className="text-3xl md:text-4xl mb-4">{t.financial.title}</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             {t.financial.subtitle}
           </p>
@@ -30,9 +35,15 @@ export function FinancialSection() {
               <div className="w-12 h-12 bg-[#fbbf24] rounded-xl flex items-center justify-center mb-4">
                 <Home className="w-6 h-6 text-white" />
               </div>
-              <div className="text-2xl font-bold text-[#fbbf24] mb-2">5 000 000 Kč</div>
-              <h3 className="text-base mb-1">{t.financial.propertyPrice || "Cena nemovitosti"}</h3>
-              <p className="text-xs text-gray-300">Modelový příklad pro jeden dům/byt</p>
+              <div className="text-2xl font-bold text-[#fbbf24] mb-2">
+                5 000 000 Kč
+              </div>
+              <h3 className="text-base mb-1">
+                {t.financial.propertyPrice || "Cena nemovitosti"}
+              </h3>
+              <p className="text-xs text-gray-300">
+                Modelový příklad pro jeden dům/byt
+              </p>
             </CardContent>
           </Card>
 
@@ -41,9 +52,13 @@ export function FinancialSection() {
               <div className="w-12 h-12 bg-[#f59e0b] rounded-xl flex items-center justify-center mb-4">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
-              <div className="text-2xl font-bold text-[#fbbf24] mb-2">14 500 Kč</div>
+              <div className="text-2xl font-bold text-[#fbbf24] mb-2">
+                14 500 Kč
+              </div>
               <h3 className="text-base mb-1">{t.financial.monthlyIncome}</h3>
-              <p className="text-xs text-gray-300">{t.financial.monthlyIncomeDesc}</p>
+              <p className="text-xs text-gray-300">
+                {t.financial.monthlyIncomeDesc}
+              </p>
             </CardContent>
           </Card>
 
@@ -52,9 +67,13 @@ export function FinancialSection() {
               <div className="w-12 h-12 bg-[#3b82f6] rounded-xl flex items-center justify-center mb-4">
                 <Percent className="w-6 h-6 text-white" />
               </div>
-              <div className="text-2xl font-bold text-[#fbbf24] mb-2">~3,5%</div>
+              <div className="text-2xl font-bold text-[#fbbf24] mb-2">
+                ~3,5%
+              </div>
               <h3 className="text-base mb-1">{t.financial.yearlyYield}</h3>
-              <p className="text-xs text-gray-300">{t.financial.yearlyYieldDesc}</p>
+              <p className="text-xs text-gray-300">
+                {t.financial.yearlyYieldDesc}
+              </p>
             </CardContent>
           </Card>
 
@@ -63,9 +82,13 @@ export function FinancialSection() {
               <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
-              <div className="text-2xl font-bold text-[#fbbf24] mb-2">1,74M Kč</div>
+              <div className="text-2xl font-bold text-[#fbbf24] mb-2">
+                1,74M Kč
+              </div>
               <h3 className="text-base mb-1">{t.financial.totalReturn}</h3>
-              <p className="text-xs text-gray-300">{t.financial.totalReturnDesc}</p>
+              <p className="text-xs text-gray-300">
+                {t.financial.totalReturnDesc}
+              </p>
             </CardContent>
           </Card>
 
@@ -74,9 +97,13 @@ export function FinancialSection() {
               <div className="w-12 h-12 bg-[#8b5cf6] rounded-xl flex items-center justify-center mb-4">
                 <BarChart3 className="w-6 h-6 text-white" />
               </div>
-              <div className="text-2xl font-bold text-[#fbbf24] mb-2">+5,0M Kč</div>
+              <div className="text-2xl font-bold text-[#fbbf24] mb-2">
+                +5,0M Kč
+              </div>
               <h3 className="text-base mb-1">{t.financial.capitalGrowth}</h3>
-              <p className="text-xs text-gray-300">{t.financial.capitalGrowthDesc}</p>
+              <p className="text-xs text-gray-300">
+                {t.financial.capitalGrowthDesc}
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -89,19 +116,26 @@ export function FinancialSection() {
             </div>
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-[#fbbf24] mb-2">
-                {t.financial.propertyOwnership || 'Po 10 letech je nemovitost Vaše!'}
+                {t.financial.propertyOwnership ||
+                  "Po 10 letech je nemovitost Vaše!"}
               </h3>
               <p className="text-lg text-gray-200">
-                {t.financial.propertyOwnershipDesc || 'Celkové zhodnocení: 1,74M Kč z nájmu + 5,0M Kč zhodnocení = 6,74M Kč zisk při investici 5M Kč'}
+                {t.financial.propertyOwnershipDesc ||
+                  "Celkové zhodnocení: 1,74M Kč z nájmu + 5,0M Kč zhodnocení = 6,74M Kč zisk při investici 5M Kč"}
               </p>
             </div>
           </div>
         </div>
 
         <div className="text-center">
-          <p className="text-xl text-gray-300 mb-6">{t.financial.tryCalculator}</p>
+          <p className="text-xl text-gray-300 mb-6">
+            {t.financial.tryCalculator}
+          </p>
           <Link href="/kalkulacka">
-            <Button size="lg" className="bg-[#f59e0b] hover:bg-[#d97706] text-white">
+            <Button
+              size="lg"
+              className="bg-[#f59e0b] hover:bg-[#d97706] text-white"
+            >
               {t.financial.calculateReturn}
             </Button>
           </Link>

@@ -3,9 +3,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Percent, PiggyBank, Calculator, BarChart3, Home } from "lucide-react";
 import { useLanguage } from "@/app/contexts/LanguageContext";
+import { NumberTicker } from "@/components/ui/number-ticker";
 
 export function InvestorBenefitsSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const locale = language === "cs" ? "cs-CZ" : language === "it" ? "it-IT" : "en-US";
   
   const benefits = [
     {
@@ -109,30 +111,48 @@ export function InvestorBenefitsSection() {
                 <div className="grid md:grid-cols-4 gap-6">
                   <div className="bg-white/70 rounded-xl p-4 border border-gray-200">
                     <div className="text-sm text-gray-600 mb-1">{t.investorBenefits.investment}</div>
-                    <div className="text-2xl font-bold text-[#1e3a8a]">5,0 mil Kč</div>
+                    <div className="text-2xl font-bold text-[#1e3a8a]">
+                      <NumberTicker value={5.0} decimalPlaces={1} locale={locale} className="text-[#1e3a8a]" />
+                      <span className="ml-1">mil Kč</span>
+                    </div>
                   </div>
                   <div className="bg-white/70 rounded-xl p-4 border border-gray-200">
                     <div className="text-sm text-gray-600 mb-1">{t.investorBenefits.monthlyRent}</div>
-                    <div className="text-2xl font-bold text-[#f59e0b]">14 500 Kč</div>
+                    <div className="text-2xl font-bold text-[#f59e0b]">
+                      <NumberTicker value={14500} locale={locale} className="text-[#f59e0b]" />
+                      <span className="ml-1">Kč</span>
+                    </div>
                   </div>
                   <div className="bg-white/70 rounded-xl p-4 border border-gray-200">
                     <div className="text-sm text-gray-600 mb-1">{t.investorBenefits.rent10Years}</div>
-                    <div className="text-2xl font-bold text-[#10b981]">1,74 mil Kč</div>
+                    <div className="text-2xl font-bold text-[#10b981]">
+                      <NumberTicker value={1.74} decimalPlaces={2} locale={locale} className="text-[#10b981]" />
+                      <span className="ml-1">mil Kč</span>
+                    </div>
                   </div>
                   <div className="bg-white/70 rounded-xl p-4 border border-gray-200">
                     <div className="text-sm text-gray-600 mb-1">
                       {t.investorBenefits.propertyValue}
                     </div>
-                    <div className="text-2xl font-bold text-[#3b82f6]">~10,0 mil Kč</div>
+                    <div className="text-2xl font-bold text-[#3b82f6]">
+                      <span>~</span>
+                      <NumberTicker value={10.0} decimalPlaces={1} locale={locale} className="text-[#3b82f6]" />
+                      <span className="ml-1">mil Kč</span>
+                    </div>
                     <div className="text-[10px] text-gray-400 font-normal leading-tight mt-1">{t.investorBenefits.appreciationRate}</div>
                   </div>
                 </div>
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <div className="text-sm text-gray-600 mb-2">{t.investorBenefits.totalProfit}</div>
                   <div className="text-4xl font-bold bg-gradient-to-r from-[#f59e0b] to-[#ef4444] bg-clip-text text-transparent">
-                    +6,74 mil Kč
+                    +
+                    <NumberTicker value={6.74} decimalPlaces={2} locale={locale} className="bg-gradient-to-r from-[#f59e0b] to-[#ef4444] bg-clip-text text-transparent" />
+                    <span className="ml-1">mil Kč</span>
                   </div>
-                  <div className="text-sm text-gray-500 mt-1">{t.investorBenefits.roi}</div>
+                  <div className="text-sm text-gray-500 mt-1">
+                    ≈ <NumberTicker value={135} locale={locale} className="text-gray-500" /> % 
+                    {language === "cs" ? " návratnost investice" : language === "it" ? " ritorno sull'investimento" : " return on investment"}
+                  </div>
                 </div>
               </div>
             </CardContent>
