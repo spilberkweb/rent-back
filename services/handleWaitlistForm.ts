@@ -51,7 +51,7 @@ export async function handleWaitlistForm(
   }
 
   const webhookUrl =
-    "https://hook.eu1.make.com/823uehwf8pbh33i6cgjitjwrm95n8j14";
+    "https://hook.eu1.make.com/5ns0t9t9vipqt2vrx29a7wsgbezrf2ai";
   const apiKey = process.env.MAKE_WEBHOOK_API_KEY;
 
   try {
