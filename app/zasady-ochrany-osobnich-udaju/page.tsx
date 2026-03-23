@@ -3,16 +3,16 @@
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  ShieldCheck,
-  User,
+  Clock,
   Database,
   MessageSquare,
-  Clock,
+  ShieldCheck,
+  User,
   UserCheck,
 } from "lucide-react";
 
 export default function PrivacyPolicyPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="min-h-screen bg-slate-50 py-20 px-4">
@@ -24,11 +24,7 @@ export default function PrivacyPolicyPage() {
           <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             {t.privacy.title}
           </h1>
-          <p className="text-lg text-slate-600">
-            {t.language === "cs"
-              ? "Vaše soukromí je pro nás prioritou. Přečtěte si, jak nakládáme s vašimi údaji."
-              : "Your privacy is our priority. Read how we handle your data."}
-          </p>
+          <p className="text-lg text-slate-600">{t.privacy.subtitle}</p>
         </div>
 
         <div className="grid gap-6">
@@ -114,9 +110,7 @@ export default function PrivacyPolicyPage() {
         </div>
 
         <div className="mt-12 text-center text-sm text-slate-400">
-          {t.language === "cs"
-            ? "Poslední aktualizace: 23. března 2026"
-            : "Last updated: March 23, 2026"}
+          {t.privacy.lastUpdated}
         </div>
       </div>
     </div>
