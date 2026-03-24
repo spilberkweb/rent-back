@@ -48,7 +48,7 @@ export function InvestorBenefitsSection() {
     {
       icon: Percent,
       title: t.investorBenefits.totalReturn,
-      value: "80-120%",
+      value: "80-180%",
       description: t.investorBenefits.totalReturnDesc,
       color: "from-[#ef4444] to-[#dc2626]"
     }
