@@ -3,7 +3,7 @@
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
-const logoWhite = "/rent-back-white.svg";
+const logoWhite = "/spilberk-premium-logo.svg";
 
 export function Footer() {
   const { t, language } = useLanguage();
