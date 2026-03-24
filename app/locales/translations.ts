@@ -37,7 +37,7 @@ export const translations = {
       minimalCosts: "Minimální náklady",
       minimalCostsDesc: "Platíte pouze daň z nemovitosti a poplatek za odpady",
       ownership: "Vlastnictví",
-      ownershipDesc: "Jste zapsaní vlastník v katastru nemovitostí",
+      ownershipDesc: "Jste zapsaný vlastník v katastru, nemovitost můžete kdykoliv prodat nebo profinancovat",
       totalReturn: "Celkový výnos",
       totalReturnDesc:
         "Kombinace nájemného a kapitálového zhodnocení za 10 let",
