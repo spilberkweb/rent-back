@@ -8,6 +8,7 @@ import { FinancialSection } from "@/components/home/FinancialSection";
 import { InvestmentModel } from "@/components/InvestmentModel";
 import { CTASection } from "@/components/home/CTASection";
 import { ChartSection } from "@/components/home/Chart";
+import PropertyCatalogueSection from "@/components/home/PropertyCatalogueSection";
 
 export const metadata: Metadata = {
   title: "Rent|Back - Investujte do nemovitostí bez starostí",
@@ -22,6 +23,7 @@ export default function Page() {
       <InvestorBenefitsSection />
       <BenefitsSection />
       <PropertyGallerySection />
+      <PropertyCatalogueSection />
       <FinancialSection />
       <ChartSection />
       <HowItWorksSection />
